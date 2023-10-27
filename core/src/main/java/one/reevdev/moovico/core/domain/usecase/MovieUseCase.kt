@@ -1,9 +1,9 @@
-package com.rivibi.mooviku.core.domain.usecase
+package one.reevdev.moovico.core.domain.usecase
 
 import one.reevdev.moovico.core.data.Resource
 import com.rivibi.mooviku.core.domain.model.Movie
-import com.rivibi.mooviku.core.domain.model.MovieDetail
-import com.rivibi.mooviku.core.domain.model.Review
+import one.reevdev.moovico.core.domain.model.MovieDetail
+import one.reevdev.moovico.core.domain.model.Review
 import kotlinx.coroutines.flow.Flow
 
 interface MovieUseCase {

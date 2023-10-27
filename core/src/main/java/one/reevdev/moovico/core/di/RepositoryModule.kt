@@ -1,7 +1,7 @@
-package com.rivibi.mooviku.core.di
+package one.reevdev.moovico.core.di
 
 import one.reevdev.moovico.core.data.repository.MovieRepository
-import com.rivibi.mooviku.core.domain.repository.IMovieRepository
+import one.reevdev.moovico.core.domain.repository.IMovieRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

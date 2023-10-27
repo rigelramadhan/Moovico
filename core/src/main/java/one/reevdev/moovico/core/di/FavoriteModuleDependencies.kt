@@ -1,6 +1,6 @@
-package com.rivibi.mooviku.core.di
+package one.reevdev.moovico.core.di
 
-import com.rivibi.mooviku.core.domain.usecase.MovieUseCase
+import one.reevdev.moovico.core.domain.usecase.MovieUseCase
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent

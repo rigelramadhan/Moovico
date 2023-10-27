@@ -1,4 +1,4 @@
-package com.rivibi.mooviku.core.utils
+package one.reevdev.moovico.core.utils
 
 import one.reevdev.moovico.core.data.ImageConfig
 import one.reevdev.moovico.core.data.local.room.entity.GenreList
@@ -6,14 +6,14 @@ import one.reevdev.moovico.core.data.local.room.entity.MovieEntity
 import one.reevdev.moovico.core.data.remote.response.GetDetailResponse
 import one.reevdev.moovico.core.data.remote.response.MoviesItem
 import one.reevdev.moovico.core.data.remote.response.ReviewItem
-import com.rivibi.mooviku.core.domain.model.AuthorDetails
-import com.rivibi.mooviku.core.domain.model.Genres
+import one.reevdev.moovico.core.domain.model.AuthorDetails
+import one.reevdev.moovico.core.domain.model.Genres
 import com.rivibi.mooviku.core.domain.model.Movie
-import com.rivibi.mooviku.core.domain.model.MovieDetail
-import com.rivibi.mooviku.core.domain.model.ProductionCompanies
-import com.rivibi.mooviku.core.domain.model.ProductionCountries
-import com.rivibi.mooviku.core.domain.model.Review
-import com.rivibi.mooviku.core.domain.model.SpokenLanguages
+import one.reevdev.moovico.core.domain.model.MovieDetail
+import one.reevdev.moovico.core.domain.model.ProductionCompanies
+import one.reevdev.moovico.core.domain.model.ProductionCountries
+import one.reevdev.moovico.core.domain.model.Review
+import one.reevdev.moovico.core.domain.model.SpokenLanguages
 
 object DataMapper {
     private fun generateImageLink(

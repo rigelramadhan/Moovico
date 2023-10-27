@@ -1,4 +1,4 @@
-package com.rivibi.mooviku.core.utils
+package one.reevdev.moovico.core.utils
 
 import android.os.Handler
 import android.os.Looper

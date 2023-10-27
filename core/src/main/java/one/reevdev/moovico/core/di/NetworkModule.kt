@@ -1,4 +1,4 @@
-package com.rivibi.mooviku.core.di
+package one.reevdev.moovico.core.di
 
 import one.reevdev.moovico.core.data.remote.network.ApiConfig
 import one.reevdev.moovico.core.data.remote.network.ApiService

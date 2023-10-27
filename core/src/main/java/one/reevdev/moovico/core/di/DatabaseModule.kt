@@ -1,4 +1,4 @@
-package com.rivibi.mooviku.core.di
+package one.reevdev.moovico.core.di
 
 import android.content.Context
 import androidx.room.Room

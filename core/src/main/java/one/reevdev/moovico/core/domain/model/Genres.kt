@@ -1,4 +1,4 @@
-package com.rivibi.mooviku.core.domain.model
+package one.reevdev.moovico.core.domain.model
 
 data class Genres(
     val name: String,

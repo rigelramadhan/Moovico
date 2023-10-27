@@ -8,11 +8,11 @@ import one.reevdev.moovico.core.data.remote.ApiResponse
 import one.reevdev.moovico.core.data.remote.datasource.RemoteDataSource
 import one.reevdev.moovico.core.data.remote.response.MoviesItem
 import com.rivibi.mooviku.core.domain.model.Movie
-import com.rivibi.mooviku.core.domain.model.MovieDetail
-import com.rivibi.mooviku.core.domain.model.Review
-import com.rivibi.mooviku.core.domain.repository.IMovieRepository
-import com.rivibi.mooviku.core.utils.AppExecutors
-import com.rivibi.mooviku.core.utils.DataMapper
+import one.reevdev.moovico.core.domain.model.MovieDetail
+import one.reevdev.moovico.core.domain.model.Review
+import one.reevdev.moovico.core.domain.repository.IMovieRepository
+import one.reevdev.moovico.core.utils.AppExecutors
+import one.reevdev.moovico.core.utils.DataMapper
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
