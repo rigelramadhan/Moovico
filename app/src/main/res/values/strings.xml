@@ -2,4 +2,5 @@
     <string name="app_name">Moovico</string>
     <string name="description_movie_image">Movie image</string>
     <string name="description_more_item">More item</string>
+    <string name="message_generic_error">Something went wrong!</string>
 </resources>
