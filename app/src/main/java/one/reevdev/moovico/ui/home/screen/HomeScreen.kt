@@ -1,11 +1,10 @@
-package one.reevdev.moovico.ui.screen.home
+package one.reevdev.moovico.ui.home.screen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.hilt.navigation.compose.hiltViewModel
 import com.rivibi.mooviku.core.domain.model.Movie
-import one.reevdev.moovico.ui.component.MovieHorizontalList
+import one.reevdev.moovico.ui.home.component.MovieHorizontalList
 
 @Composable
 fun HomeScreen(

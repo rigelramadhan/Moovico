@@ -1,4 +1,4 @@
-package one.reevdev.moovico.ui.screen.home
+package one.reevdev.moovico.ui.home.screen
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
