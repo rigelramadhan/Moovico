@@ -7,6 +7,8 @@ import one.reevdev.moovico.core.domain.usecase.MovieUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
@@ -37,11 +39,7 @@ class HomeViewModel @Inject constructor(
             viewModelState.value.toUiState()
         )
 
-    init {
-        getMovies()
-    }
-
-    private fun getMovies() {
+    fun getMovies() {
         viewModelState.update { it.copy(isLoading = true) }
 
         viewModelScope.launch {
@@ -49,18 +47,30 @@ class HomeViewModel @Inject constructor(
             val topRatedMoviesFlow = movieUseCase.getTopRated()
 
             combine(popularMoviesFlow, topRatedMoviesFlow) { popular, topRated ->
-                viewModelState.update {
-                    if (popular is Resource.Error && topRated is Resource.Error)
-                        it.copy(isLoading = false, errorMessage = ErrorMessage())
-                    else
-                        it.copy(
-                            isLoading = false,
-                            homeFeed = HomeFeed(
-                                popularMovies = popular.data.orEmpty(),
-                                topRatedMovies = topRated.data.orEmpty(),
-                                upcomingMovies = emptyList()
-                            )
+                if (popular is Resource.Error && topRated is Resource.Error)
+                    HomeViewModelState(isLoading = false, errorMessage = ErrorMessage())
+                else
+                    HomeViewModelState(
+                        isLoading = false,
+                        errorMessage = null,
+                        homeFeed = HomeFeed(
+                            popularMovies = popular.data.orEmpty(),
+                            topRatedMovies = topRated.data.orEmpty(),
+                            upcomingMovies = emptyList()
                         )
+                    )
+            }.catch { throwable ->
+                viewModelState.update {
+                    it.copy(
+                        isLoading = false,
+                        errorMessage = ErrorMessage(
+                            throwableMessage = throwable.message
+                        )
+                    )
+                }
+            }.collect {
+                viewModelState.update {
+                    it
                 }
             }
         }
@@ -73,7 +83,6 @@ private data class HomeViewModelState(
     val errorMessage: ErrorMessage? = null,
     val search: String = emptyString()
 ) {
-
     fun toUiState(): HomeUiState = if (homeFeed != null) {
         HomeUiState.HasMovies(
             homeFeed,
@@ -88,7 +97,6 @@ private data class HomeViewModelState(
             search,
         )
     }
-
 }
 
 sealed interface HomeUiState {
