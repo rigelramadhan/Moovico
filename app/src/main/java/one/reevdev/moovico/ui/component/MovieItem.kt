@@ -1,21 +1,19 @@
 package one.reevdev.moovico.ui.component
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import one.reevdev.moovico.R
@@ -26,13 +24,16 @@ import one.reevdev.moovico.utils.emptyString
 @Composable
 fun MovieItem(
     modifier: Modifier = Modifier,
+    itemWidth: Dp = 240.dp,
     imageUrl: String? = null,
     title: String = emptyString(),
     caption: String = emptyString(),
     onItemClick: () -> Unit,
 ) {
     Column(
-        modifier = modifier,
+        modifier = modifier
+            .width(itemWidth)
+            .clickable { onItemClick() },
     ) {
         AsyncImage(
             modifier = Modifier

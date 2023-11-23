@@ -3,4 +3,6 @@
     <string name="description_movie_image">Movie image</string>
     <string name="description_more_item">More item</string>
     <string name="message_generic_error">Something went wrong!</string>
+    <string name="label_popular">Popular</string>
+    <string name="label_top_rated">Top Rated</string>
 </resources>
