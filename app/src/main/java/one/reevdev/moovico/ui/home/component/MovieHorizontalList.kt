@@ -1,4 +1,4 @@
-package one.reevdev.moovico.ui.component
+package one.reevdev.moovico.ui.home.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.rivibi.mooviku.core.domain.model.Movie
+import one.reevdev.moovico.ui.component.ItemCategory
 
 @Composable
 fun MovieHorizontalList(

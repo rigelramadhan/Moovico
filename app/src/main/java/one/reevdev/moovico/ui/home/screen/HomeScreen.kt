@@ -1,4 +1,4 @@
-package one.reevdev.moovico.ui.screen.home
+package one.reevdev.moovico.ui.home.screen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -12,6 +12,7 @@ import com.rivibi.mooviku.core.domain.model.Movie
 import one.reevdev.moovico.R
 import one.reevdev.moovico.ui.component.MovieHorizontalList
 import one.reevdev.moovico.ui.theme.MoovicoTheme
+import one.reevdev.moovico.ui.home.component.MovieHorizontalList
 
 @Composable
 fun HomeScreen(

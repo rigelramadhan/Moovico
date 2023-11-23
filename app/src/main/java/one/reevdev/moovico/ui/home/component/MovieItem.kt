@@ -1,4 +1,4 @@
-package one.reevdev.moovico.ui.component
+package one.reevdev.moovico.ui.home.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import one.reevdev.moovico.R
+import one.reevdev.moovico.ui.component.MoovicoText
 import one.reevdev.moovico.ui.theme.MoovicoTheme
 import one.reevdev.moovico.ui.theme.TransparentGray
 import one.reevdev.moovico.utils.emptyString
